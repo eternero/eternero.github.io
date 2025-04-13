@@ -4,5 +4,5 @@ plugins:
   - jekyll-remote-theme
 
 # Set your site’s title and a brief description.
-title: "Multi-Modal Music Recommendation System"
-description: "Nothing here yet."
+title: "3M-RS"
+description: "A Multi-Modal Music Recommendation System"
