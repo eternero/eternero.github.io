@@ -47,13 +47,13 @@ users would be able to filter results to include or exclude the genres in their 
 
 Signal processing is a fundamental component of our project, playing a vital role in transforming raw audio into meaningful representations. Our system utilizes various mathematical transforms to analyze and extract essential characteristics from music. These transformations allow us to decompose signals into components that reveal structure, pitch content, and compressibility. All relevant transform implementations qre applied to our algorithm.
 
-Fourier Transform
+**Fourier Transform**
 
 The Fourier Transform (FT) allows us to break down a time-domain audio signal into its frequency components. This is especially valuable when analyzing complex musical compositions composed of overlapping tones. Our implementation applies FT to visualize and extract dominant frequencies in each track.
 
 By identifying which frequencies are most prominent in a song, we can infer pitch content, tonal complexity, and harmonic relationships. This is useful in clustering similar-sounding tracks, building timbral profiles, and providing recommendations based on musical structure rather than popularity metrics.
 
-Constant-Q Transform
+**Constant-Q Transform**
 
 The Constant-Q Transform (CQT) is well-suited for music due to its logarithmic frequency scale, which mirrors human pitch perception. Unlike FT, CQT provides higher frequency resolution at lower pitches—exactly where musical detail often resides. Our implementation extracts musical notes and harmonic patterns from audio signals.
 
