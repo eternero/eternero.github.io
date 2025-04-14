@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "3M-RS : Multi-Modal Music Recommendation System"
+title: "3M-RS"
 ---
 
 # About
@@ -29,8 +29,8 @@ _timbre, mel-frequency coefficients_ and _pitch_. This combination of numerical 
 enables us to capture in great detail the distinct features of music – which later on allows us to be
 able to make intricate comparisons which lead to accurate recommendations.
 
-It is worth mentioning that we source most of our models and algorithms from Essentia \[1] with the additional
-usage of HarmoF0 \[2] as our Pitch-Estimating Model and the Spotify API to retrieve song popularity.
+It is worth mentioning that we source most of our models and algorithms from **Essentia** \[1] with the additional
+usage of **HarmoF0** \[2] as our Pitch-Estimating Model and the **Spotify API** to retrieve song popularity.
 
 
 ## User Generated Content
@@ -47,7 +47,15 @@ users would be able to filter results to include or exclude the genres in their 
 ...
 
 
+# Current Progress
+
+
+#
+
+
 # References
 \[1] Bogdanov, D., Wack N., Gómez E., Gulati S., Herrera P., Mayor O., et al. (2013). ESSENTIA: an Audio Analysis Library for Music Information Retrieval. International Society for Music Information Retrieval Conference (ISMIR'13). 493-498.
+
 \[2] W. Wei, P. Li, Y. Yu and W. Li, "Harmof0: Logarithmic scale dilated convolution for pitch estimation", IEEE International Conference on Multimedia and Expo (ICME), pp. 1-6, 2022.
+
 \[3] T. Akiba, S. Sano, T. Yanase, T. Ohta, and M. Koyama, “Optuna,” Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pp. 2623–2631, Jul. 2019. doi:10.1145/3292500.3330701
