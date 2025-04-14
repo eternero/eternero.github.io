@@ -63,8 +63,43 @@ CQT enhances our ability to detect instrument specific timbres, distinguish over
 
 # Current Progress
 
+Since the beginning of the project, out primary focus has been on understanding and capturing the complex nature of music. To accomplish this we've dedicated substantial effort to the study and implementation of advanced audio feature extraction techniques, which form the backbone of our recommendation system.
+  
+## Track Fingerprinting: Feature Research and Implementation
 
-#
+We conducted an in-depth technical analysis of Essentia’s **algorithms**, focusing on how these descriptors can improve our track fingerprinting process. The goal was to capture core musical characteristics that go beyond traditional metrics like tempo or loudness, providing a deeper comprehension of timbre, brightness, and dynamics.
+
+Our list of implemented features include:
+
+- **RhythmExtractor2013**: Extracts tempo and beat positions, good for understanding the traks pacing.
+- **Energy**: Measure the overall energy of the track, good for identifying high-energy and calm, softer tracks.
+- **LoudnessEBUR128**: Quantifies perceived loudness and dynamic range based on industry standards.
+- **SpectralCentroidTime**: Measures the brightness of a track, distinguishing between bright sounds and darker, bass-heavy ones.
+- **RollOff**: Measures how much of the signal's energy is under the specified percentage part of a spectrum. Excellent to identify false-positive when a track has high percutions but is dark.
+- **SpectralContrast**: Captures the harmonic textures
+- **HFC**: Highlights energy in higher frequencies
+- **Flux**: Measures the rate of spectral change, captures the dynamic progression and energy shifts within a track. 
+- **FlatnessDB**: Distinguishing between harmonic, melodic content and noisy, chaotic textures like percussive or distorted sounds.
+- **EnergyBandRatio**: Breaks the tracks frequency spectrum into bands, this offer a detailed insight into the energy distribution inside each band.
+- **SpectralPeaks**: Good for analyzing dominant frequency peaks to understand its harmonic structure.
+- **MFCC**: Great at capturing timbral characteristics, widely used in speech recognition and audio analysis. 
+- **GFCC**: Provides a more robust, noise resistant timbral profiling than MFCC, inspired by the human auditory perception.
+
+This comprehensive `toolbox` of features enables our system to **capture the unique audio signature of each track**
+
+## Feature Documentation and Analysis
+
+To ensure transparency and maintainability, we have fully documented each algorithm:
+- **Purpose**: Why is this algorithm useful in our music analysis.
+- **Unique** Value: How it complements our system and what makes it unique.
+- **Interpretation**: What its output reveal about the track. 
+
+This documentation will support future development, help guide future selection, and form the foundation for our eventual recommendation model.
+## Next step ???
+As we move forward, we'll be focusing on:
+- Implement the distance-based similarity methods with the newly integrated algorithms.
+- Growing our dataset.
+- Creating the initial prototype of our recommendation engine.
 
 
 # References
