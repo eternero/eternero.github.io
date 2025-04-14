@@ -55,9 +55,9 @@ By identifying which frequencies are most prominent in a song, we can infer pitc
 
 **Constant-Q Transform**
 
-The Constant-Q Transform (CQT) is well-suited for music due to its logarithmic frequency scale, which mirrors human pitch perception. Unlike FT, CQT provides higher frequency resolution at lower pitches—exactly where musical detail often resides. Our implementation extracts musical notes and harmonic patterns from audio signals.
+The Constant-Q Transform (CQT) is well-suited for music due to its logarithmic frequency scale, which mirrors human pitch perception. Unlike FT, CQT provides higher frequency resolution at lower pitches exactly where musical detail often resides. Our implementation extracts musical notes and harmonic patterns from audio signals.
 
-CQT enhances our ability to detect instrument-specific timbres, distinguish overlapping notes, and identify musical motifs. These capabilities are critical for producing accurate, musically-aware recommendations. In particular, CQT helps the system recommend songs with similar melodic or harmonic structure, even if the genre or instrumentation differs.
+CQT enhances our ability to detect instrument specific timbres, distinguish overlapping notes, and identify musical motifs. These capabilities are critical for producing accurate, musical recommendations. In particular, CQT helps the system recommend songs with similar melodic or harmonic structure, even if the genre or instrumentation differs.
 
 
 
