@@ -1,0 +1,15 @@
+/* Example normalization for body text */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+p, li, span, div {
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+}
