@@ -7,15 +7,27 @@ title: "3M-RS"
 Our project, 3M-RS proposes the development of a Multi-Modal Music Recommendation System. The approach
 that we propose departs from traditional solutions. Instead of heavily relying on **Collaborative Filtering** (CF)
 and past user behavior, which have shown to cause issues like _popularity bias_ and _filter bubbles_,
-our solution is built around the intrinsic characterisics of the music itself.
+our solution is built around the intrinsic characteristics of the music itself.
 
 By leveraging audio analysis, signal processing, user-generated content (e.g. social tags), and
 direct user input, our system aims to offer a more equitable, transparent, and user-controlled recommendation
 experience which aims to stray away from the issues observed in other solutions.
 
 
+# How does it work?
+The main idea behind our project is rather easy to understand, and so is the user workflow! You provide some tracks
+and you get recommendations that should be similar to your input. The steps below should serve as a quick user guide to understand
+our project and get some recommendations!
+
+1. **Provide an audio input** : This could be a single track or multiple, whichever you'd like.
+2. **Provide preferences for filtering** : Indicate what type of songs you'd like to be recommended. For example, songs of the same\
+genre only or songs with high tempo.
+3. **Wait for your results** : Once this has been done, all that is left is for the audio input to be processed through the _Audio Data Pipeline_\
+and for it to then be compared with the songs in our dataset. Once we get a result from those comparisons, we apply the provided preferences as\
+filters and provide the top recommendations to the user!
+
 # What data do we use?
-As it was just mentioned, we use three primary sources to create an _audio profile_ of sorts for
+As it was previously mentioned, we use three primary sources to create an _audio profile_ of sorts for
 the music in our dataset. These sources will be discussed in detail in the sections below.
 
 
@@ -49,22 +61,26 @@ Signal processing is a fundamental component of our project, playing a vital rol
 
 ### Fourier Transform
 
-The Fourier Transform (FT) allows us to break down a time-domain audio signal into its frequency components. This is especially valuable when analyzing complex musical compositions composed of overlapping tones. Our implementation applies FT to visualize and extract dominant frequencies in each track.
+The **Fourier Transform** (FT) allows us to break down a time-domain audio signal into its frequency components. This is especially valuable when analyzing complex musical compositions composed of overlapping tones. Our implementation applies FT to visualize and extract dominant frequencies in each track.
 
 By identifying which frequencies are most prominent in a song, we can infer pitch content, tonal complexity, and harmonic relationships. This is useful in clustering similar-sounding tracks, building timbral profiles, and providing recommendations based on musical structure rather than popularity metrics.
 
 ### Constant-Q Transform
 
-The Constant-Q Transform (CQT) is well-suited for music due to its logarithmic frequency scale, which mirrors human pitch perception. Unlike FT, CQT provides higher frequency resolution at lower pitches exactly where musical detail often resides. Our implementation extracts musical notes and harmonic patterns from audio signals.
+The **Constant-Q Transform** (CQT) is well-suited for music due to its logarithmic frequency scale, which mirrors human pitch perception. Unlike FT, CQT provides higher frequency resolution at lower pitches exactly where musical detail often resides. Our implementation extracts musical notes and harmonic patterns from audio signals.
 
 CQT enhances our ability to detect instrument specific timbres, distinguish overlapping notes, and identify musical motifs. These capabilities are critical for producing accurate, musical recommendations. In particular, CQT helps the system recommend songs with similar melodic or harmonic structure, even if the genre or instrumentation differs.
 
 
+# Current Progress and the Future
+At the time being, we've been able to develop all of the core aspects of our project by now. This includes the _Audio Data Pipeline_, the _RYM User-Generated Content Extraction Module_,
+_implementation of transform-based algorithms_ and more. Furthermore, we're also working on optimizing the core algorithms behind our recommendation system by using Optuna \[3] for
+hyperparameter tuning with distinct distance metrics as our objective functions and changes in the handling of high-dimensional features.
 
-# Current Progress
-
-
-#
+As we go along with our project, we aim to optimize what has already been developed and to create a robust recommendation system that is able to fully capture the essence of music.
+Even as we've already gotten significant progress and amazing results from our first few tests with the current recommendation system, we're still constantly looking for ways to
+improve our system, such as implementing new features that are highlighted in relevant literature and working around constraints that come about, whether it be the heavy
+computational cost of Music Information Retrieval Models or lack of social tags from services like Spotify or RateYourMusic.
 
 
 # References
