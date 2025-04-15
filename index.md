@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "3M-RS"
+custom_css: style.css
 ---
 
 # About
@@ -20,10 +21,10 @@ and you get recommendations that should be similar to your input. The steps belo
 our project and get some recommendations!
 
 1. **Provide an audio input** : This could be a single track or multiple, whichever you'd like.
-2. **Provide preferences for filtering** : Indicate what type of songs you'd like to be recommended. For example, songs of the same\
+2. **Provide preferences for filtering** : Indicate what type of songs you'd like to be recommended. For example, songs of the same
 genre only or songs with high tempo.
-3. **Wait for your results** : Once this has been done, all that is left is for the audio input to be processed through the _Audio Data Pipeline_\
-and for it to then be compared with the songs in our dataset. Once we get a result from those comparisons, we apply the provided preferences as\
+3. **Wait for your results** : Once this has been done, all that is left is for the audio input to be processed through the _Audio Data Pipeline_
+and for it to then be compared with the songs in our dataset. Once we get a result from those comparisons, we apply the provided preferences as
 filters and provide the top recommendations to the user!
 
 # What data do we use?
@@ -74,7 +75,7 @@ CQT enhances our ability to detect instrument specific timbres, distinguish over
 
 # Current Progress and the Future
 At the time being, we've been able to develop all of the core aspects of our project by now. This includes the _Audio Data Pipeline_, the _RYM User-Generated Content Extraction Module_,
-_implementation of transform-based algorithms_ and more. Furthermore, we're also working on optimizing the core algorithms behind our recommendation system by using Optuna \[3] for
+_implementation of transform-based algorithms_ and more. Furthermore, we're also working on optimizing the core algorithms behind our recommendation system by using **Optuna** \[3] for
 hyperparameter tuning with distinct distance metrics as our objective functions and changes in the handling of high-dimensional features.
 
 As we go along with our project, we aim to optimize what has already been developed and to create a robust recommendation system that is able to fully capture the essence of music.
