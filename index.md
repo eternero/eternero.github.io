@@ -57,17 +57,14 @@ users would be able to filter results to include or exclude the genres in their 
 
 
 ## Signal Processing
-
 Signal processing is a fundamental component of our project, playing a vital role in transforming raw audio into meaningful representations. Our system utilizes various mathematical transforms to analyze and extract essential characteristics from music. These transformations allow us to decompose signals into components that reveal structure, pitch content, and compressibility. All relevant transform implementations are applied to our algorithm.
 
 ### Fourier Transform
-
 The **Fourier Transform** (FT) allows us to break down a time-domain audio signal into its frequency components. This is especially valuable when analyzing complex musical compositions composed of overlapping tones. Our implementation applies FT to visualize and extract dominant frequencies in each track.
 
 By identifying which frequencies are most prominent in a song, we can infer pitch content, tonal complexity, and harmonic relationships. This is useful in clustering similar-sounding tracks, building timbral profiles, and providing recommendations based on musical structure rather than popularity metrics.
 
 ### Constant-Q Transform
-
 The **Constant-Q Transform** (CQT) is well-suited for music due to its logarithmic frequency scale, which mirrors human pitch perception. Unlike FT, CQT provides higher frequency resolution at lower pitches exactly where musical detail often resides. Our implementation extracts musical notes and harmonic patterns from audio signals.
 
 CQT enhances our ability to detect instrument specific timbres, distinguish overlapping notes, and identify musical motifs. These capabilities are critical for producing accurate, musical recommendations. In particular, CQT helps the system recommend songs with similar melodic or harmonic structure, even if the genre or instrumentation differs.
@@ -82,6 +79,18 @@ As we go along with our project, we aim to optimize what has already been develo
 Even as we've already gotten significant progress and amazing results from our first few tests with the current recommendation system, we're still constantly looking for ways to
 improve our system, such as implementing new features that are highlighted in relevant literature and working around constraints that come about, whether it be the heavy
 computational cost of Music Information Retrieval Models or lack of social tags from services like Spotify or RateYourMusic.
+
+
+In parallel, we've focused on expanding the system’s understanding of the **audio signal itself** by exploring a variety of algorithms through the **Essentia** library. These features help analyze aspects such as timbre, brightness, rhythm, and harmonic structure. This features give sus a tracks fingerprint, which is essential for our model.
+
+In addition, each integrated algorithm has been fully documented with its purpose, unique value, and interpretation to ensure long-term maintainability and help guide future development of the recommendation engine.
+
+## What's Next?
+- Implement distance-based similarity using the newly integrated algorithms.  
+- Expand the track dataset.
+- Launch a functional prototype of the recommendation engine.  
+- Integrate additional audio features from ongoing research.  
+- Continue working around the system constrains (e.g., computation, missing tags).
 
 
 # References
